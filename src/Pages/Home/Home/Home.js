@@ -1,13 +1,14 @@
 import React from "react";
 import { Button, Carousel, Form, FormControl } from "react-bootstrap";
 import banner from "../../../images/images/Banner-1.jpg";
+import Bikes from "../Bikes/Bikes";
 
 const Home = () => {
   return (
     <div>
       <div className="my-5 w-50 mx-auto">
         <Form className="d-flex">
-          <FormControl type="search" placeholder="Search" className="me-2 rounded-pill" aria-label="Search" />
+          <FormControl type="search" placeholder="Search Products..." className="me-2 rounded-pill" aria-label="Search" />
           <Button className="rounded-pill" variant="outline-warning">
             Search
           </Button>
@@ -22,11 +23,14 @@ const Home = () => {
               <h3>Here's the Great Deal</h3>
               <p>Grab your hidden beast</p>
               <button style={{ backgroundColor: "orangeRed" }} className="btn rounded-pill text-white w-25">
-                Book Now
+                Deal Now
               </button>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+      </div>
+      <div>
+        <Bikes />
       </div>
     </div>
   );

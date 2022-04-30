@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/zhrnHw7/yamaha-mt-10-sp.jpg",
+        "name": "Yamaha MT-10 SP",
+        "description": "Along with the stripped-down, aggressive new look, the MT-10 SP adds an air of exclusivity with additional premium styling details and distinctive Liquid Metal/Raven color scheme signifying its status at the top of the Hyper Naked range. The MT-10 SP also boasts an attractive polished swingarm and exclusive color-matched lower fairing for a more purposeful, race-bred look.",
+        "price": "16,899",
+        "quantity": "4",
+        "supplier": "ACI Motors"
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/xYrRJKj/yamaha-mt-10.jpg",
+        "name": "Yamaha MT-10",
+        "description": "A stripped-down new look is achieved by removing unnecessary bodywork elements and refocusing attention on the pure mechanical beauty of the muscular engine and compact frame. New twin-eye mono-focus LED headlights and LED position lights situated above the headlights combine with a more compact nose assembly to minimize overhang and lend a refined, dominant style. Enlarged, functional intake ducts mounted on either side of the fuel tank cover increase efficiency while further enhancing the bike’s aggressiveness.",
+        "price": "13,999",
+        "quantity": "2",
+        "supplier": "ACI Motors"
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/bbYYWTL/yamaha-mt-09-sp.jpg",
+        "name": "Yamaha MT-09 SP",
+        "description": "The MT-09 SP features a newly developed 890cc liquid-cooled three-cylinder, DOHC, four-valve-per-cylinder fuel-injected (YCC-T) engine with a downdraft intake. The bore × stroke of 78 mm × 62.1 mm and 11.5:1 compression ratio provide outstanding torque with strong power delivery characteristics. Almost all of the fundamental parts of the engine, from the pistons and connecting rods to the crankshaft, camshafts and crankcase, have all been redesigned with a reduction in weight. The combination of improved combustion efficiency and lighter weight results in an impressive fuel efficiency of 49 MPG.",
+        "price": "11,899",
+        "quantity": "5",
+        "supplier": "ACI Motors"
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/wQPfLH6/yamaha-XSR900.jpg",
+        "name": "Yamaha XSR900",
+        "description": "The striking look of the next generation Yamaha XSR900 is apparent from every angle. With the tank design, exposed aluminum frame and side silhouette drawing clear inspiration from iconic Yamaha race bikes of the past, there is also an unmistakably modern design element underscoring the machines high-performance capabilities. Full LED lighting, a new full-color 3.5-inch TFT display and a host of premium touches including drilled fork caps, machined headlight stays, forged brake pedal, hidden passenger pegs, blacked-out levers, darkened brake reservoirs, bar-end mirrors, embossed aluminum rear underplate and aluminum XSR logo all combine to reflect modernity and a high level of fit and finish.",
+        "price": "9,999",
+        "quantity": "5",
+        "supplier": "ACI Motors"
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/DYSdrF4/yamaha-mt-09.jpg",
+        "name": "Yamaha MT-09",
+        "description": "Along with the stripped-down, aggressive new look, the MT-10 SP adds an air of exclusivity with additional premium styling details and distinctive Liquid Metal/Raven color scheme signifying its status at the top of the Hyper Naked range. The MT-10 SP also boasts an attractive polished swingarm and exclusive color-matched lower fairing for a more purposeful, race-bred look.",
+        "price": "9,499",
+        "quantity": "4",
+        "supplier": "ACI Motors"
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/st6RxRr/yamaha-XSR700.jpg",
+        "name": "Yamaha XSR700",
+        "description": "The XSR700 blends Yamaha’s world-class engineering with timeless style, creating a new type of machine for riders looking for an authentic and honest motorcycle that doesn’t sacrifice performance. Drawing influence from Yamaha’s classic “XS” series of motorcycles, the XSR oozes class with its exposed aluminum details, retro-influenced bodywork, stepped seat and custom lighting and instrumentation.",
+        "price": "8,799",
+        "quantity": "7",
+        "supplier": "ACI Motors"
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co/Wym4GMK/yamaha-mt-07.jpg",
+        "name": "Yamaha MT-07",
+        "description": "The MT-07 features an updated, compact 689cc liquid-cooled, inline twin cylinder, DOHC engine with fuel injection. The unique power character of the engine provides outstanding low- to mid-range torque with a linear throttle response and strong high-rpm pulling power. Maximizing riding excitement in the real world, the engine maintains the same level of response due to its intake air duct design, exhaust system specs - now integrated 2-into-1 exhaust pipes and muffler - and updated ECU specs.",
+        "price": "7,899",
+        "quantity": "7",
+        "supplier": "ACI Motors"
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/Pr6tk70/yamaha-mt-03.jpg",
+        "name": "Yamaha MT-03",
+        "description": "This 321cc liquid-cooled two-cylinder engine features lightweight forged pistons and carburized connecting rods, delivering easy to manage power in the low rpm range with strong high rpm power. The extremely light clutch feeling makes the MT-03 even more fun in the city, while its offset cylinders and advanced fuel injection system ensures smooth throttle response.",
+        "price": "4,799",
+        "quantity": "4",
+        "supplier": "ACI Motors"
+    }
+]

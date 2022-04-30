@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <Navbar className="shadow py-3" bg="light" expand="lg">
+    <header className="header">
+      <Navbar className="" expand="lg">
         <Container>
           <Navbar.Brand className="fw-bold fs-4" as={Link} to="/home">
             Bike Town
@@ -26,6 +26,11 @@ const Header = () => {
               <Nav.Link as={Link} to="/login">
                 Login
               </Nav.Link>
+              <NavDropdown title="Services" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/bikes">Bikes</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/accessories">Accessories</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/equipments">Equipments</NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>
