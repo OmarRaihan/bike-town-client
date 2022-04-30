@@ -1,20 +1,33 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import { Button, Carousel, Form, FormControl } from "react-bootstrap";
 import banner from "../../../images/images/Banner-1.jpg";
 
 const Home = () => {
   return (
     <div>
-      <Carousel fade>
-        <Carousel.Item>
-          <img className="d-block w-100" src={banner} alt="banner" />
-          <Carousel.Caption>
-            <h3>Here's the Great Deal</h3>
-            <p>Grab your hidden beast</p>
-            <button style={{backgroundColor: 'orangeRed'}} className="btn rounded-pill text-white w-25">Book Now</button>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <div className="my-5 w-50 mx-auto">
+        <Form className="d-flex">
+          <FormControl type="search" placeholder="Search" className="me-2 rounded-pill" aria-label="Search" />
+          <Button className="rounded-pill" variant="outline-warning">
+            Search
+          </Button>
+        </Form>
+      </div>
+
+      <div className="my-5">
+        <Carousel fade>
+          <Carousel.Item>
+            <img className="d-block w-100" src={banner} alt="banner" />
+            <Carousel.Caption>
+              <h3>Here's the Great Deal</h3>
+              <p>Grab your hidden beast</p>
+              <button style={{ backgroundColor: "orangeRed" }} className="btn rounded-pill text-white w-25">
+                Book Now
+              </button>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </div>
   );
 };

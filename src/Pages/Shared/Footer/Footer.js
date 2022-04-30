@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Footer.css";
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
   return (
@@ -50,8 +52,9 @@ const Footer = () => {
                 </ul>
               </div>
               <div class="col-lg-3 item social">
-                <a href="#">
+                {/* <a href="#">
                   <i class="icon ion-social-facebook"></i>
+                  <FontAwesomeIcon icon={fa} />
                 </a>
                 <a href="#">
                   <i class="icon ion-social-twitter"></i>
@@ -61,7 +64,7 @@ const Footer = () => {
                 </a>
                 <a href="#">
                   <i class="icon ion-social-instagram"></i>
-                </a>
+                </a> */}
                 <p class="copyright">All rights reserved &copy; 2022</p>
               </div>
             </div>
