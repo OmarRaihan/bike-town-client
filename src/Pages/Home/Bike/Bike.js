@@ -5,7 +5,7 @@ const Bike = ({ bike }) => {
   const { id, img, name, description, price, quantity, supplier } = bike;
   return (
     <div>
-      <div className="card mx-auto border-0 rounded-lg shadow-lg p-2" style={{ width: "23rem", }}>
+      <div className="card mx-auto border-0 rounded-lg shadow-lg p-2" style={{ width: "23.5rem" }}>
         <img className="rounded" src={img} alt="" />
         <div className="info text-center mt-4">
           <h4>{name}</h4>

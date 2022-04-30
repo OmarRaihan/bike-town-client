@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Carousel, Form, FormControl } from "react-bootstrap";
 import banner from "../../../images/images/Banner-1.jpg";
-import Bikes from "../Bikes/Bikes";
+import Bike from "../Bike/Bike";
+import RidingKits from "../RidingKits/RidingKits";
+import "./Home.css";
 
 const Home = () => {
+  const [bikes, setBikes] = useState([]);
+
+  useEffect(() => {
+    fetch("bikes.json")
+      .then((res) => res.json())
+      .then((data) => setBikes(data));
+  }, []);
   return (
     <div>
       <div className="my-5 w-50 mx-auto">
@@ -29,8 +38,21 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
       </div>
+
+      {/* Bike Collection */}
+      <div className="container">
+        <h2 className="text-center my-5">Bike Collection</h2>
+        <div className="bikes-container my-5">
+          {bikes.slice(0, 6).map((bike) => (
+            <Bike key={bike.id} bike={bike}></Bike>
+          ))}
+        </div>
+        <hr />
+      </div>
+
+      {/* Riding Kits */}
       <div>
-        <Bikes />
+      <RidingKits />
       </div>
     </div>
   );

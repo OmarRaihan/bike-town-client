@@ -12,10 +12,10 @@ const Bikes = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-center my-5">Bike Collection</h1>
-      <div className="container bikes-container my-5">
-        {bikes.slice(0, 6).map((bike) => (
+    <div className="container">
+      <h2 className="text-center my-5">Bike Collection</h2>
+      <div className="bikes-container my-5">
+        {bikes.map((bike) => (
           <Bike key={bike.id} bike={bike}></Bike>
         ))}
       </div>
