@@ -7,8 +7,8 @@ const Bike = ({ bike }) => {
     <div>
       <div className="card mx-auto border-0 rounded-lg shadow-lg p-2" style={{ width: "23.5rem" }}>
         <img className="rounded" src={img} alt="" />
-        <div className="info text-center mt-4">
-          <h4>{name}</h4>
+        <div className="info ms-2 mt-4">
+          <h4 style={{color: "orange"}}>{name}</h4>
           <p>{description.slice(0, 80)}</p>
           <h5>Price: ${price}</h5>
           <h6>Quantity: {quantity}</h6>

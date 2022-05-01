@@ -41,13 +41,15 @@ const Home = () => {
 
       {/* Bike Collection */}
       <div className="container">
-        <h2 className="text-center my-5">Bike Collection</h2>
+        <div className="my-5">
+        <h2 className="text-center">Bike Collection</h2>
+        <hr />
+        </div>
         <div className="bikes-container my-5">
           {bikes.slice(0, 6).map((bike) => (
             <Bike key={bike.id} bike={bike}></Bike>
           ))}
         </div>
-        <hr />
       </div>
 
       {/* Riding Kits */}
