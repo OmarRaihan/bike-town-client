@@ -3,6 +3,7 @@ import { Button, Carousel, Form, FormControl } from "react-bootstrap";
 import banner from "../../../images/images/Banner-1.jpg";
 import Bike from "../Bike/Bike";
 import RidingKits from "../RidingKits/RidingKits";
+import Spares from "../Spares/Spares";
 import "./Home.css";
 
 const Home = () => {
@@ -55,6 +56,11 @@ const Home = () => {
       {/* Riding Kits */}
       <div>
       <RidingKits />
+      </div>
+
+      {/* Spares & Parts */}
+      <div>
+        <Spares/>
       </div>
     </div>
   );

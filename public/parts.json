@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/8mZW75d/Radiator.jpg",
+        "name": "Radiator",
+        "price": "120",
+        "quantity": 7
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/8sRTDYL/fuel-injector.jpg",
+        "name": "Compatible Fuel Injector",
+        "price": "40",
+        "quantity": 5
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/hsNyP1Q/brake-clutch.jpg",
+        "name": "Brake & Clutch levers",
+        "price": "20",
+        "quantity": 15
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/dkqNvCG/silencer-header.jpg",
+        "name": "Exhaust Header",
+        "price": "50",
+        "quantity": 11
+    }
+]
