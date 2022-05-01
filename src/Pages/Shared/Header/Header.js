@@ -17,6 +17,19 @@ const Header = () => {
               <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
+
+              <NavDropdown title="Services" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/bikes">
+                  Bikes
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/kits">
+                  Riding Kits
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/spares">
+                  Spares-Parts
+                </NavDropdown.Item>
+              </NavDropdown>
+
               <Nav.Link as={Link} to="/blogs">
                 Blogs
               </Nav.Link>
@@ -26,11 +39,6 @@ const Header = () => {
               <Nav.Link as={Link} to="/login">
                 Login
               </Nav.Link>
-              <NavDropdown title="Services" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/bikes">Bikes</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/accessories">Accessories</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/equipments">Equipments</NavDropdown.Item>
-              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>

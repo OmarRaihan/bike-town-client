@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Footer.css";
 
@@ -11,16 +10,16 @@ const Footer = () => {
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-sm-4 col-md-3 item">
-              <h3>Services</h3>
+              <h3>Products</h3>
               <ul>
                 <li>
-                  <a href="#">Bikes</a>
+                  <a href="#bikes">Bikes</a>
                 </li>
                 <li>
-                  <a href="#">Accessories</a>
+                  <a href="#kits">Riding Kits</a>
                 </li>
                 <li>
-                  <a href="#">Equipments</a>
+                  <a href="#spares">Spares Parts</a>
                 </li>
               </ul>
             </div>
@@ -28,13 +27,13 @@ const Footer = () => {
               <h3>About</h3>
               <ul>
                 <li>
-                  <a href="#">Company</a>
+                  <a href="#company">Company</a>
                 </li>
                 <li>
-                  <a href="#">Team</a>
+                  <a href="#team">Team</a>
                 </li>
                 <li>
-                  <a href="#">Legacy</a>
+                  <a href="#legacy">Legacy</a>
                 </li>
               </ul>
             </div>
@@ -42,27 +41,27 @@ const Footer = () => {
               <h3>Careers</h3>
               <ul>
                 <li>
-                  <a href="#">Job openings</a>
+                  <a href="#job">Job openings</a>
                 </li>
                 <li>
-                  <a href="#">Employee success</a>
+                  <a href="#employee">Employee success</a>
                 </li>
                 <li>
-                  <a href="#">Benefits</a>
+                  <a href="#benefits">Benefits</a>
                 </li>
               </ul>
             </div>
             <div class="col-lg-3 item social">
-              <a href="#">
+              <a href="#facebook">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a to="#">
+              <a href="#twitter">
                 <i class="fa-brands fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="#linkedIn">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="#">
+              <a href="#instagram">
                 <i class="fa-brands fa-instagram"></i>
               </a>
               <p class="copyright">All rights reserved &copy; {year}</p>

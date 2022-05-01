@@ -10,6 +10,8 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Register from "./Pages/Login/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Bikes from "./Pages/Home/Bikes/Bikes";
+import RidingKits from "./Pages/Home/RidingKits/RidingKits";
+import Spares from "./Pages/Home/Spares/Spares";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/home" element={<Home/>}></Route>
         <Route path="/blogs" element={<Blogs/>}></Route>
         <Route path="/bikes" element={<Bikes/>}></Route>
+        <Route path="/kits" element={<RidingKits/>}></Route>
+        <Route path="/spares" element={<Spares/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
