@@ -12,11 +12,11 @@ const Spares = () => {
   }, []);
   return (
     <div className="container">
-      <div className="my-5">
+      <div>
       <h2 className="text-center">Spare & Parts</h2>
       <hr />
       </div>
-      <div className="spares-container my-5">
+      <div className="spares-container mt-4 mb-5">
         {spares.map((spare) => (
           <Spare key={spare.id} spare={spare}></Spare>
         ))}

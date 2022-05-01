@@ -12,11 +12,11 @@ const RidingKits = () => {
   }, []);
   return (
     <div className="container">
-      <div className="my-5">
+      <div className="">
         <h2 className="text-center">Riding Kits</h2>
         <hr />
       </div>
-      <div className="ridingKits-container my-5">
+      <div className="ridingKits-container mt-4 mb-5">
         {kits.map((kit) => (
           <RidingKit key={kit.id} kit={kit}></RidingKit>
         ))}
