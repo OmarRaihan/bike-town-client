@@ -6,7 +6,7 @@ const Bikes = () => {
   const [bikes, setBikes] = useState([]);
 
   useEffect(() => {
-    fetch("bikes.json")
+    fetch("http://localhost:7000/bike")
       .then((res) => res.json())
       .then((data) => setBikes(data));
   }, []);
@@ -16,7 +16,7 @@ const Bikes = () => {
       <h2 className="text-center my-5">Bike Collection</h2>
       <div className="bikes-container my-5">
         {bikes.map((bike) => (
-          <Bike key={bike.id} bike={bike}></Bike>
+          <Bike key={bike._id} bike={bike}></Bike>
         ))}
       </div>
     </div>

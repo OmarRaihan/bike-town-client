@@ -10,7 +10,7 @@ const Home = () => {
   const [bikes, setBikes] = useState([]);
 
   useEffect(() => {
-    fetch("bikes.json")
+    fetch("http://localhost:7000/bike")
       .then((res) => res.json())
       .then((data) => setBikes(data));
   }, []);
