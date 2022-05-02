@@ -5,7 +5,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Social from "../Social/Social";
 import Loading from "../../Shared/Loading/Loading";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -64,7 +65,7 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
         </Form.Group>
-        <Button style={{backgroundColor: "orangeRed"}} className="w-100 mb-1 border-0" type="submit">
+        <Button style={{ backgroundColor: "orangeRed" }} className="w-100 mb-1 border-0" type="submit">
           Login
         </Button>
       </Form>
