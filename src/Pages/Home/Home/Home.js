@@ -48,7 +48,7 @@ const Home = () => {
         </div>
         <div className="bikes-container my-5">
           {bikes.slice(0, 6).map((bike) => (
-            <Bike key={bike.id} bike={bike}></Bike>
+            <Bike key={bike._id} bike={bike}></Bike>
           ))}
         </div>
       </div>
