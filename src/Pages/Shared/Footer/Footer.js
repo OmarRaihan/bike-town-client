@@ -5,11 +5,11 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <div class="footer-clean">
+    <div className="footer-clean">
       <footer>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm-4 col-md-3 item">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-sm-4 col-md-3 item">
               <h3>Products</h3>
               <ul>
                 <li>
@@ -23,7 +23,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="col-sm-4 col-md-3 item">
+            <div className="col-sm-4 col-md-3 item">
               <h3>About</h3>
               <ul>
                 <li>
@@ -37,7 +37,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="col-sm-4 col-md-3 item">
+            <div className="col-sm-4 col-md-3 item">
               <h3>Careers</h3>
               <ul>
                 <li>
@@ -51,20 +51,20 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="col-lg-3 item social">
+            <div className="col-lg-3 item social">
               <a href="#facebook">
-                <i class="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-facebook-f"></i>
               </a>
               <a href="#twitter">
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter"></i>
               </a>
               <a href="#linkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+                <i className="fa-brands fa-linkedin-in"></i>
               </a>
               <a href="#instagram">
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
-              <p class="copyright">All rights reserved &copy; {year}</p>
+              <p className="copyright">All rights reserved &copy; {year}</p>
             </div>
           </div>
         </div>
