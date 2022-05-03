@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Inventory = () => {
   const { inventoryId } = useParams();
   const [product, setProduct] = useState({});
-  const [quantity, setQuantity] = useState(0)
+  const [update, setUpdate] = useState(0);
+  const navigate = useNavigate();
+  const {id} = useParams();
 
   useEffect(() => {
     const url = `http://localhost:7000/bike/${inventoryId}`;
@@ -15,18 +17,37 @@ const Inventory = () => {
       .then((data) => setProduct(data));
   }, [inventoryId]);
 
+  const handleDeliver = () =>{
+    setUpdate(update - 1)
+  }
 
+
+  // Update button
   const handleUpdate = event =>{
     event.preventDefault();
+    // const quantity = event.target.quantity.value;
+    // const product = {quantity};
   };
 
-  const handleDeliver = () =>{
-    setQuantity(quantity - 1)
-  }
+  // // send data to server
+  // fetch('http://localhost:7000/bike', {
+  //   method: 'PUT', 
+  //   headers: {
+  //     'content-type': 'application/json'
+  //   },
+  //   body: JSON.parse(product)
+  // })
+  // .then(res=> res.json())
+  // .then(data => {
+  //   console.log('success', data);
+  //   alert('Quantity added successfully!!');
+  //   // event.target.reset();
+  // })
+
 
   return (
     <div>
-      <h1 className="text-center my-5">Inventory Items</h1>
+      <h1 className="text-center my-5">Inventory Item</h1>
 
       <div style={{ width: "30rem" }} className="card border-0 shadow mx-auto p-3">
         <div className="row">
@@ -54,7 +75,7 @@ const Inventory = () => {
         <h1 className="text-center my-5">Update Stock</h1>
         <Form onClick={handleUpdate} className="w-50 mx-auto">
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="text" name="quantity" placeholder="Product Quantity" />
+            <Form.Control type="number" name="quantity" placeholder="Product Quantity" />
           </Form.Group>
           <Button style={{ backgroundColor: "orangeRed" }} className="w-100 mb-1 border-0" type="submit">
             Update

@@ -12,8 +12,8 @@ import Bikes from "./Pages/Home/Bikes/Bikes";
 import RidingKits from "./Pages/Home/RidingKits/RidingKits";
 import Spares from "./Pages/Home/Spares/Spares";
 import Inventory from "./Pages/Inventory/Inventory";
-import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import ManageInventory from "./Pages/Home/ManageInventory/ManageInventory";
+import AddItem from "./Pages/AddItem/AddItem";
 
 function App() {
   return (
@@ -27,12 +27,14 @@ function App() {
         <Route path="/kits" element={<RidingKits />}></Route>
         <Route path="/spares" element={<Spares />}></Route>
         <Route path="/manage" element={<ManageInventory/>}></Route>
+        <Route path="/addItem" element={<AddItem/>}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/inventory/:inventoryId" element={<RequireAuth>
+        <Route path="/inventory/:inventoryId" element={<Inventory/>}></Route>
+        {/* <Route path="/inventory/:inventoryId" element={<RequireAuth>
           <Inventory />
-        </RequireAuth>}></Route>
+        </RequireAuth>}></Route> */}
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
