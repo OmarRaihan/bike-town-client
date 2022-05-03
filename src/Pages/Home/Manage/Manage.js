@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Manage.css'
 
 const Manage = ({manage}) => {
-    const { _id, img, name, description, price, quantity, supplier } = manage;
+    const { img, name, description, price, quantity, supplier } = manage;
+    const [manages, setManages] = useState([]);
 
-    const handleDelete =(_id) =>{
+    const handleDelete =(id) =>{
         const proceed = window.confirm('Are you sure to delete?');
         if(proceed){
-            console.log("deleted", _id);
+            console.log("deleted", id);
+            const url = `http://localhost:7000/bike/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                if(data.deletedCount > 0){
+                    console.log('deleted');
+                    const remaining = manage.filter(manage => manages._id !== id);
+                    setManages(remaining)
+                }
+            })
         }
     }
 
