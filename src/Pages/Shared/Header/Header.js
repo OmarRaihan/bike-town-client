@@ -14,8 +14,8 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      <Navbar className="" expand="lg">
+    <header className="header shadow-lg">
+      <Navbar expand="lg" sticky="top">
         <Container>
           <Navbar.Brand className="fw-bold fs-4" as={Link} to="/home">
             Bike Town

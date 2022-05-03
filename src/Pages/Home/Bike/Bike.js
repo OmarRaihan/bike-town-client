@@ -6,9 +6,11 @@ const Bike = ({ bike }) => {
   const { _id, img, name, description, price, quantity, supplier } = bike;
 
   const navigate = useNavigate();
-  const navigateToInventory = () => {
-    navigate("/inventory/");
+
+  const navigateToInventory = (id) => {
+    navigate(`/inventory/${_id}`);
   };
+
   return (
     <div>
       <div className="card mx-auto border-0 rounded-lg shadow-lg p-2" style={{ width: "23rem" }}>
@@ -21,14 +23,12 @@ const Bike = ({ bike }) => {
           <h6>Supplier: {supplier}</h6>
         </div>
         <div>
-          <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white w-50 my-2 ms-2" onClick={navigateToInventory}>
+          <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white w-50 my-2 ms-2" onClick={() => navigateToInventory(_id)}>
             Manage
           </button>
 
-          {/* <Link to="/inventory">
-            <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white w-50 my-2 ms-2">
-              Manage
-            </button>
+          {/* <Link className="btn btn-danger" to="/inventory">
+            Manage
           </Link> */}
         </div>
       </div>
