@@ -33,6 +33,8 @@ const Register = () => {
     console.log("Updated profile");
     navigate("/home");
   };
+
+
   return (
     <div className="container w-50 mx-auto my-5">
       <h3 className="text-center mb-3">Please SignUp</h3>

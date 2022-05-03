@@ -26,10 +26,6 @@ const Bike = ({ bike }) => {
           <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white w-50 my-2 ms-2" onClick={() => navigateToInventory(_id)}>
             Manage
           </button>
-
-          {/* <Link className="btn btn-danger" to="/inventory">
-            Manage
-          </Link> */}
         </div>
       </div>
     </div>

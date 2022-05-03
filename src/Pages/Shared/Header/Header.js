@@ -18,7 +18,7 @@ const Header = () => {
       <Navbar expand="lg" sticky="top">
         <Container>
           <Navbar.Brand className="fw-bold fs-4" as={Link} to="/home">
-            Bike Town
+            BIKE TOWN
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -28,6 +28,9 @@ const Header = () => {
               </Nav.Link>
 
               <NavDropdown title="Services" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/manage">
+                  Manage Inventory
+                </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/bikes">
                   Bikes
                 </NavDropdown.Item>

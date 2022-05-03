@@ -1,23 +1,27 @@
 [
     {
+        "id": 1,
         "img": "https://i.ibb.co/wLS87bq/FALCO-LIBERT-2-1.jpg",
         "name": "FALCO VOLT 2 TOURING BOOTS",
         "price": "1500",
         "quantity": 13
     },
     {
+        "id": 2,
         "img": "https://i.ibb.co/rs9JtgC/BBG-BREEZE-GLOVES-RED-1.jpg",
         "name": "BBG BREEZE RIDING GLOVES",
         "price": "250",
         "quantity": 25
     },
     {
+        "id": 3,
         "img": "https://i.ibb.co/8jmfQYP/Axor-Flow-Red-Riding-Jacket.jpg",
         "name": "Axor Flow Red Riding Jacket",
         "price": "495",
         "quantity": 18
     },
     {
+        "id": 4,
         "img": "https://i.ibb.co/wNX3MXK/BELL-INTEGRITY-GY-OR-helmet.jpg",
         "name": "BELL QUALIFIER INTEGRITY HELMET",
         "price": "1200",

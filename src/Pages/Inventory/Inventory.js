@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 const Inventory = () => {
   const { inventoryId } = useParams();
   const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(0)
 
   useEffect(() => {
     const url = `http://localhost:7000/bike/${inventoryId}`;
@@ -12,11 +13,15 @@ const Inventory = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
-  }, []);
+  }, [inventoryId]);
 
 
   const handleUpdate = event =>{
     event.preventDefault();
+  };
+
+  const handleDeliver = () =>{
+    setQuantity(quantity - 1)
   }
 
   return (
@@ -36,8 +41,8 @@ const Inventory = () => {
             <p>Supplier: {product.supplier}</p>
           </div>
 
-          <button style={{ backgroundColor: "orangeRed" }} className="btn text-white w-25 ms-2">
-            Deliver
+          <button onClick={handleDeliver} style={{ backgroundColor: "orangeRed" }} className="btn text-white w-25 ms-2">
+            Delivered
           </button>
         </div>
       </div>
