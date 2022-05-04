@@ -7,7 +7,7 @@ const Blogs = () => {
       <h2 className="text-center my-4">Blog Section</h2>
 
       {/* Question - 1 */}
-      <div className="question-1 w-75 mx-auto my-5">
+      <div className="question-1 mx-auto my-5">
         <h4 className="text-center my-3">JavaScript VS NodeJs</h4>
         <hr />
         <div>
@@ -18,7 +18,7 @@ const Blogs = () => {
       </div>
 
       {/* Question - 2 */}
-      <div className="question-2 w-75 mx-auto my-5">
+      <div className="question-2 mx-auto my-5">
         <h3 className="text-center">Question - 2</h3>
         <hr />
         <div>
@@ -40,7 +40,7 @@ const Blogs = () => {
       </div>
 
       {/* Question - 3 */}
-      <div className="question-3 w-75 mx-auto my-5">
+      <div className="question-3 mx-auto my-5">
         <h3 className="text-center my-3">Question - 3</h3>
         <hr />
         <h4 className="text-center my-3">SQL vs NoSQL</h4>

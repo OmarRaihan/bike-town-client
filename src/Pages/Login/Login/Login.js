@@ -80,7 +80,7 @@ const Login = () => {
       </p>
       <p>
         Forget Password?
-        <button className="btn text-primary text-decoration-none border-0 pe-auto" onClick={resetPassword}>
+        <button className="btn-link text-primary text-decoration-none bg-white border-0 pe-auto" onClick={resetPassword}>
           Reset Password
         </button>
       </p>

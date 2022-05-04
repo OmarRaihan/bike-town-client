@@ -1,0 +1,9 @@
+.update-form {
+    width: 35%;
+}
+
+@media screen and (max-width: 540px) {
+    .update-form {
+        width: 90%;
+    }
+}

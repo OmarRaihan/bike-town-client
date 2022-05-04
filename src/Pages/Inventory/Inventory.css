@@ -1,0 +1,13 @@
+.card{
+    width: 550px;
+}
+
+/* .deliver-button{
+    width: 25%;
+} */
+
+@media screen and (max-width: 540px) {
+    .card{
+        width: 350px;
+    }
+}
