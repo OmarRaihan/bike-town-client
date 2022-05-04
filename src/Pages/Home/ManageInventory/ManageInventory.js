@@ -3,8 +3,8 @@ import useBikes from "../../../hooks/useBikes";
 import "./ManageInventory.css";
 
 const ManageInventory = () => {
+  const [bikes, setBikes] = useBikes();
   const navigate = useNavigate();
-  const [bikes] = useBikes();
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete?");
@@ -18,8 +18,8 @@ const ManageInventory = () => {
         .then((data) => {
           if (data.deletedCount > 0) {
             console.log("deleted");
-            const remaining = bikes.filter((manage) => bikes._id !== id);
-            // setBikes(remaining);
+            const remaining = bikes.filter((bike) => bikes._id !== id);
+            setBikes(remaining);
           }
         });
     }
