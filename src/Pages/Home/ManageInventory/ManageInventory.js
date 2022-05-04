@@ -10,7 +10,7 @@ const ManageInventory = () => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `http://localhost:7000/bike/${id}`;
+      const url = `https://limitless-mountain-78144.herokuapp.com/bike/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -50,7 +50,7 @@ const ManageInventory = () => {
               <div>
                 <button
                   style={{ backgroundColor: "orangeRed" }}
-                  className="btn fw-bold text-white w-50 my-2 ms-2 "
+                  className="btn fw-bold text-white  my-2 ms-2 "
                   onClick={() => handleDelete(bike._id)}
                 >
                   Delete

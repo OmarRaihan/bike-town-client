@@ -6,7 +6,7 @@ const AddItem = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    const url = `http://localhost:7000/bike`;
+    const url = `https://limitless-mountain-78144.herokuapp.com/bike`;
     fetch(url, {
       method: "POST",
       headers: {

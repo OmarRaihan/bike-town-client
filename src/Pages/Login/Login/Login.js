@@ -3,8 +3,8 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Button, Form } from "react-bootstrap";
 import Social from "../Social/Social";
 
@@ -34,7 +34,7 @@ const Login = () => {
     errorElement = <p className="text-danger">Error: {error?.message}</p>;
   }
 
-  const handleLogin = async(event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
@@ -55,33 +55,7 @@ const Login = () => {
       toast("Please enter your email address");
     }
   };
-  // -------------------------------------------
 
-  // const emailRef = useRef('');
-  // const passwordRef = useRef('');
-  // const navigate = useNavigate();
-
-  // const [
-  //   signInWithEmailAndPassword, 
-  //   user, 
-  //   loading, 
-  //   error,
-  // ] = useSignInWithEmailAndPassword(auth);
-
-  //  const handleLogin = (event) => {
-  //   event.preventDefault();
-  //   const email = emailRef.current.value;
-  //   const password = passwordRef.current.value;
-
-  //   signInWithEmailAndPassword(email, password);
-  // };
-
-  // const navigateRegister = (event) => {
-  //   navigate("/register");
-  // };
-  // --------------------------------------------
-
-  
   return (
     <div className="container w-50 mx-auto my-5">
       <h3 className="text-center mb-3">Please Login</h3>
@@ -100,13 +74,13 @@ const Login = () => {
       {errorElement}
       <p className="my-2">
         New to BIKE TOWN?
-        <Link to="/register" className="text-danger text-decoration-none pe-auto ms-1" onClick={navigateRegister} >
+        <Link to="/register" className="text-danger text-decoration-none pe-auto ms-1" onClick={navigateRegister}>
           Please SignUp
         </Link>
       </p>
       <p>
         Forget Password?
-        <button className="btn text-primary text-decoration-none border-0 pe-auto" onClick={resetPassword} >
+        <button className="btn text-primary text-decoration-none border-0 pe-auto" onClick={resetPassword}>
           Reset Password
         </button>
       </p>

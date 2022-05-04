@@ -9,7 +9,7 @@ const Table = () => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `http://localhost:7000/bike/${id}`;
+      const url = `https://limitless-mountain-78144.herokuapp.com/bike/${id}`;
       fetch(url, {
         method: "DELETE",
       })

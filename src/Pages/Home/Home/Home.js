@@ -10,7 +10,7 @@ const Home = () => {
   const [bikes, setBikes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:7000/bike")
+    fetch("https://limitless-mountain-78144.herokuapp.com/bike")
       .then((res) => res.json())
       .then((data) => setBikes(data));
   }, []);
@@ -31,10 +31,10 @@ const Home = () => {
             <img className="d-block w-100" src={banner} alt="banner" />
             <Carousel.Caption>
               <h3>Here's the Great Deal</h3>
-              <p>Grab your hidden beast</p>
-              <button style={{ backgroundColor: "orangeRed" }} className="btn rounded-pill text-white w-25">
+              <p>Grab the beast</p>
+              {/* <button style={{ backgroundColor: "orangeRed" }} className="btn rounded-pill text-white w-25">
                 Deal Now
-              </button>
+              </button> */}
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

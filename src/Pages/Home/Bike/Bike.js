@@ -23,7 +23,7 @@ const Bike = ({ bike }) => {
           <h6>Supplier: {supplier}</h6>
         </div>
         <div>
-          <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white w-50 my-2 ms-2" onClick={() => navigateToInventory(_id)}>
+          <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white my-2 ms-2" onClick={() => navigateToInventory(_id)}>
             Manage
           </button>
         </div>

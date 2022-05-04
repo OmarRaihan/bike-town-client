@@ -6,7 +6,7 @@ const RidingKits = () => {
   const [kits, setKits] = useState([]);
 
   useEffect(() => {
-    fetch("kits.json")
+    fetch("https://limitless-mountain-78144.herokuapp.com/kit")
       .then((res) => res.json())
       .then((data) => setKits(data));
   }, []);
@@ -18,7 +18,7 @@ const RidingKits = () => {
       </div>
       <div className="ridingKits-container mt-4 mb-5">
         {kits.map((kit) => (
-          <RidingKit key={kit.id} kit={kit}></RidingKit>
+          <RidingKit key={kit._id} kit={kit}></RidingKit>
         ))}
       </div>
     </div>

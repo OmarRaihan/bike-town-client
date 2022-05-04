@@ -6,7 +6,7 @@ const Spares = () => {
   const [spares, setSpares] = useState([]);
 
   useEffect(() => {
-    fetch("parts.json")
+    fetch("https://limitless-mountain-78144.herokuapp.com/parts")
       .then((res) => res.json())
       .then((data) => setSpares(data));
   }, []);
@@ -18,7 +18,7 @@ const Spares = () => {
       </div>
       <div className="spares-container mt-4 mb-5">
         {spares.map((spare) => (
-          <Spare key={spare.id} spare={spare}></Spare>
+          <Spare key={spare._id} spare={spare}></Spare>
         ))}
       </div>
     </div>
