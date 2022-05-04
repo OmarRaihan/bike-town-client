@@ -14,6 +14,7 @@ import Spares from "./Pages/Home/Spares/Spares";
 import Inventory from "./Pages/Inventory/Inventory";
 import ManageInventory from "./Pages/Home/ManageInventory/ManageInventory";
 import AddItem from "./Pages/AddItem/AddItem";
+import Table from "./Pages/Table/Table";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/spares" element={<Spares />}></Route>
         <Route path="/manage" element={<ManageInventory/>}></Route>
         <Route path="/addItem" element={<AddItem/>}></Route>
+        <Route path="/table" element={<Table/>}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

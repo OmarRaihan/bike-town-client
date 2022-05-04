@@ -26,11 +26,14 @@ const Header = () => {
               <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
+              <Nav.Link as={Link} to="/manage">
+                Manage
+              </Nav.Link>
+              <Nav.Link as={Link} to="/table">
+                Table
+              </Nav.Link>
 
               <NavDropdown title="Services" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/manage">
-                  Manage Inventory
-                </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/bikes">
                   Bikes
                 </NavDropdown.Item>
@@ -50,7 +53,7 @@ const Header = () => {
               </Nav.Link>
               {user ? (
                 <button style={{ backgroundColor: "orangeRed" }} onClick={handleSignOut} className="signOut-btn btn rounded-pill text-white">
-                  Sign Out
+                  LogOut
                 </button>
               ) : (
                 <Nav.Link as={Link} to="/login">

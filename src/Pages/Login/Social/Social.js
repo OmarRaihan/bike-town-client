@@ -43,7 +43,7 @@ const Social = () => {
       {errorElement}
 
       <div className="text-center my-2">
-        <button onClick={() => signInWithGoogle()} className="btn btn-primary fw-bold rounded-pill w-100">
+        <button onClick={() => signInWithGoogle()} className="btn btn-dark fw-bold rounded-pill w-100">
           <img className="me-1" style={{ width: "28px" }} src={google} alt="" />
           Google
         </button>

@@ -8,21 +8,20 @@ const AddItem = () => {
 
     const url = `http://localhost:7000/bike`;
     fetch(url, {
-    method: 'POST', 
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-  .then(res=> res.json())
-  .then(result => {
-    console.log('success', result);
-  })
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("success", result);
+      });
   };
 
   return (
-    <div style={{backgroundColor: '#a8dadc', width: '35rem', padding: '1.3rem'}} className="container w-50 mx-auto my-5 rounded-2">
-
+    <div style={{ backgroundColor: "#a8dadc", width: "35rem", padding: "1.3rem" }} className="container w-50 mx-auto my-5 rounded-2">
       <h4 className="text-center mb-3">Add New Product</h4>
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input className="mb-2 border-0 rounded-1 p-2" placeholder="Name" type="text" {...register("name", { required: true })} />

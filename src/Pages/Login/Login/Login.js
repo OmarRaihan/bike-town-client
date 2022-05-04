@@ -99,7 +99,7 @@ const Login = () => {
       </Form>
       {errorElement}
       <p className="my-2">
-        New to World Gym?
+        New to BIKE TOWN?
         <Link to="/register" className="text-danger text-decoration-none pe-auto ms-1" onClick={navigateRegister} >
           Please SignUp
         </Link>
