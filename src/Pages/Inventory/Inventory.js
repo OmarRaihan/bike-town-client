@@ -47,7 +47,7 @@ const Inventory = () => {
     <div>
       <h1 className="text-center my-5">Inventory Item</h1>
 
-      <div className="card border-0 shadow mx-auto p-3">
+      <div className="inventory-card card border-0 shadow mx-auto p-3">
         <div className="">
           <div>
             <img className="img-fluid" src={product.img} alt="" />

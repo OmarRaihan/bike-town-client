@@ -38,7 +38,7 @@ const ManageInventory = () => {
       <div className="inventory-container container my-5">
         {bikes.map((bike) => (
           <div key={bike._id}>
-            <div className="card mx-auto border-0 rounded-lg shadow-lg p-2">
+            <div className="manage-card card mx-auto border-0 rounded-lg shadow-lg p-2">
               <img className="rounded" src={bike.img} alt="" />
               <div className="info mt-4">
                 <h4 style={{ color: "orange" }}>{bike.name}</h4>

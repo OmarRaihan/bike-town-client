@@ -1,9 +1,9 @@
-.card{
+.inventory-card{
     width: 500px;
 }
 
 @media screen and (max-width: 540px) {
-    .card{
+    .inventory-card{
         width: 350px;
     }
 }

@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Form } from "react-bootstrap";
 import Social from "../Social/Social";
+import './Login.css'
 
 const Login = () => {
   const emailRef = useRef("");
@@ -57,8 +58,8 @@ const Login = () => {
   };
 
   return (
-    <div className="container w-50 mx-auto my-5">
-      <h3 className="text-center mb-3">Please Login</h3>
+    <div style={{ backgroundColor: "#a8dadc", padding: "1.3rem" }} className="login-form rounded-3 mx-auto my-5">
+      <h4 className="text-center mb-4">Please Login</h4>
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control ref={emailRef} type="email" name="email" placeholder="Email" required />
@@ -80,7 +81,7 @@ const Login = () => {
       </p>
       <p>
         Forget Password?
-        <button className="btn-link text-primary text-decoration-none bg-white border-0 pe-auto" onClick={resetPassword}>
+        <button style={{backgroundColor: "#a8dadc"}} className="btn-link text-primary text-decoration-none border-0 pe-auto" onClick={resetPassword}>
           Reset Password
         </button>
       </p>

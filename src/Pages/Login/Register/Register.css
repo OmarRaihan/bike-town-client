@@ -1,0 +1,9 @@
+.register-form{
+    width: 25%;
+}
+
+@media screen and (max-width: 540px) {
+    .register-form{
+        width: 85%;
+    }
+}

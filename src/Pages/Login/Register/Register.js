@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import Social from "../Social/Social";
+import './Register.css'
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
@@ -36,8 +37,8 @@ const Register = () => {
 
 
   return (
-    <div className="container w-50 mx-auto my-5">
-      <h3 className="text-center mb-3">Please SignUp</h3>
+    <div style={{ backgroundColor: "#a8dadc", padding: "1.3rem" }} className="register-form rounded-3 mx-auto my-5">
+      <h4 className="text-center mb-4">Please SignUp</h4>
       <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="text" name="name" placeholder="Name" required />
