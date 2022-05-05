@@ -26,12 +26,22 @@ const Header = () => {
               <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
-              {
-                user ? 
-                (<Nav.Link as={Link} to="/manage">
-                Manage
-              </Nav.Link>): ''
-              }
+
+              {user ? (
+                <NavDropdown title="Manage" id="basic-nav-dropdown">
+                  <NavDropdown.Item as={Link} to="/manage">
+                    Manage Items
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/addItem">
+                    Add New Item
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/myItem">
+                    My Items
+                  </NavDropdown.Item>
+                </NavDropdown>
+              ) : (
+                ""
+              )}
 
               <NavDropdown title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/bikes">

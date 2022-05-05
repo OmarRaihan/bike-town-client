@@ -13,7 +13,7 @@ const Spares = () => {
   return (
     <div className="container">
       <div>
-      <h2 className="text-center">Spare & Parts</h2>
+      <h2 className="text-center mt-5">Spare & Parts</h2>
       <hr />
       </div>
       <div className="spares-container mt-4 mb-5">

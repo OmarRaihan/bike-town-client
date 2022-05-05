@@ -13,7 +13,7 @@ const RidingKits = () => {
   return (
     <div className="container">
       <div className="">
-        <h2 className="text-center">Riding Kits</h2>
+        <h2 className="text-center mt-5">Riding Kits</h2>
         <hr />
       </div>
       <div className="ridingKits-container mt-4 mb-5">

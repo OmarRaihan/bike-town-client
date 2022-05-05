@@ -32,7 +32,7 @@ const ManageInventory = () => {
   return (
     <div className="container">
       <div className="my-5">
-        <h2 className="text-center">Inventory Items</h2>
+        <h2 className="text-center">Manage Inventory Items</h2>
         <hr />
       </div>
       <div className="inventory-container container my-5">

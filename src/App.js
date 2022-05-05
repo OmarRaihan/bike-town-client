@@ -16,6 +16,7 @@ import ManageInventory from "./Pages/Home/ManageInventory/ManageInventory";
 import AddItem from "./Pages/AddItem/AddItem";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import UpdateQuantity from "./Pages/UpdateQuantity/UpdateQuantity";
+import MyItems from "./Pages/MyItems/MyItems";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/spares" element={<Spares />}></Route>
         <Route path="/manage" element={<ManageInventory/>}></Route>
         <Route path="/addItem" element={<AddItem/>}></Route>
+        <Route path="/myItem" element={<MyItems/>}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
