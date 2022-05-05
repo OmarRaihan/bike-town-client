@@ -35,12 +35,12 @@ const ManageInventory = () => {
         <h2 className="text-center">Inventory Items</h2>
         <hr />
       </div>
-      <div className="inventory-container my-5">
+      <div className="inventory-container container my-5">
         {bikes.map((bike) => (
           <div key={bike._id}>
-            <div className="card mx-auto border-0 rounded-lg shadow-lg p-2" style={{ width: "23rem" }}>
+            <div className="card mx-auto border-0 rounded-lg shadow-lg p-2">
               <img className="rounded" src={bike.img} alt="" />
-              <div className="info ms-2 mt-4">
+              <div className="info mt-4">
                 <h4 style={{ color: "orange" }}>{bike.name}</h4>
                 <p>{bike.description.slice(0, 80)}</p>
                 <h5>Price: ${bike.price}</h5>

@@ -13,7 +13,7 @@ const Bike = ({ bike }) => {
 
   return (
     <div>
-      <div className="card mx-auto border-0 rounded-lg shadow-lg p-2" style={{ width: "23rem" }}>
+      <div className="card mx-auto border-0 rounded-lg shadow-lg p-2">
         <img className="rounded" src={img} alt="" />
         <div className="info ms-2 mt-4">
           <h4 style={{ color: "orange" }}>{name}</h4>
