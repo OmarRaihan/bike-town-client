@@ -4,5 +4,16 @@
 }
 
 .error{
-    font-size: 10rem;
+    font-size: 9rem;
+}
+
+@media screen and (max-width: 540px) {
+    .error-page .headline{
+        font-size: 2rem;
+        margin-top: 5.6rem;
+    }
+    
+    .error{
+        font-size: 6rem;
+    }
 }
