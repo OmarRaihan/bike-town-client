@@ -29,16 +29,45 @@ function App() {
         <Route path="/bikes" element={<Bikes />}></Route>
         <Route path="/kits" element={<RidingKits />}></Route>
         <Route path="/spares" element={<Spares />}></Route>
-        <Route path="/manage" element={<ManageInventory/>}></Route>
-        <Route path="/addItem" element={<AddItem/>}></Route>
-        <Route path="/myItem" element={<MyItems/>}></Route>
+        {/* <Route path="/manage" element={<ManageInventory />}></Route> */}
+        {/* <Route path="/addItem" element={<AddItem />}></Route> */}
+        {/* <Route path="/myItem" element={<MyItems />}></Route> */}
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/update" element={<UpdateQuantity/>}></Route>
-        <Route path="/inventory/:inventoryId" element={<RequireAuth>
-          <Inventory></Inventory>
-        </RequireAuth>}></Route>
+        <Route path="/update" element={<UpdateQuantity />}></Route>
+        <Route
+          path="/inventory/:inventoryId"
+          element={
+            <RequireAuth>
+              <Inventory />,
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/manage"
+          element={
+            <RequireAuth>
+              <ManageInventory />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/addItem"
+          element={
+            <RequireAuth>
+              <AddItem />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/myItem"
+          element={
+            <RequireAuth>
+              <MyItems />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />

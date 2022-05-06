@@ -42,9 +42,10 @@ const Login = () => {
 
     await signInWithEmailAndPassword(email, password);
 
-    const { data } = await axios.post("https://limitless-mountain-78144.herokuapp.com/login", { email });
-    localStorage.setItem("accessToken", data.accessToken);
-    navigate(from, { replace: true });
+    // const { data } = await axios.post("http://localhost:7000/login", { email });
+    // console.log(data);
+    // localStorage.setItem("accessToken", data.accessToken);
+    // navigate(from, { replace: true });
   };
 
   const navigateRegister = (event) => {

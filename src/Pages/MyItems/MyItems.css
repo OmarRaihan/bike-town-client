@@ -18,5 +18,12 @@
       width: 350px;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    .items-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
   
   

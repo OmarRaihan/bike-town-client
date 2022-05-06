@@ -10,7 +10,7 @@ const UpdateQuantity = () => {
   };
 
   // // send data to server
-  // fetch('https://limitless-mountain-78144.herokuapp.com/bike', {
+  // fetch('http://localhost:7000/bike', {
   //   method: 'PUT',
   //   headers: {
   //     'content-type': 'application/json'

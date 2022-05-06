@@ -1,16 +1,19 @@
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
 import useBikes from "../../../hooks/useBikes";
 import "./ManageInventory.css";
 
 const ManageInventory = () => {
   const [bikes, setBikes] = useBikes();
   const navigate = useNavigate();
+  const [user] = useAuthState(auth);
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `https://limitless-mountain-78144.herokuapp.com/bike/${id}`;
+      const url = `http://localhost:7000/bike/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -29,10 +32,14 @@ const ManageInventory = () => {
     navigate("/addItem");
   };
 
+  if (!user) {
+    navigate("/login");
+  }
+
   return (
     <div className="container">
       <div className="my-5">
-        <h2 className="text-center">Manage Inventory Items</h2>
+        <h2 className="text-center">Manage Items ({bikes.length})</h2>
         <hr />
       </div>
       <div className="inventory-container container my-5">

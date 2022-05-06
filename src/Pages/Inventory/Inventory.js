@@ -13,7 +13,7 @@ const Inventory = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const url = `https://limitless-mountain-78144.herokuapp.com/bike/${inventoryId}`;
+    const url = `http://localhost:7000/bike/${inventoryId}`;
 
     fetch(url, {
       // headers: {
@@ -41,7 +41,7 @@ const Inventory = () => {
       decrementQuantity = () => setUpdateQuantity(1);
     }
 
-    fetch(`https://limitless-mountain-78144.herokuapp.com/bike/${id}`, {
+    fetch(`http://localhost:7000/bike/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -69,8 +69,8 @@ const Inventory = () => {
             <p>Supplier: {product.supplier}</p>
           </div>
           <div className="deliver-button">
-            <button onClick={handleDeliver} style={{ backgroundColor: "orangeRed" }} className="btn text-white">
-              Delivered
+            <button onClick={handleDeliver} style={{ backgroundColor: "orangeRed" }} className="btn text-white px-4">
+              Deliver
             </button>
           </div>
         </div>

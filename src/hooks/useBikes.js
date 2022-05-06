@@ -5,7 +5,7 @@ const useBikes = () => {
 
   useEffect(() => {
 
-    fetch("https://limitless-mountain-78144.herokuapp.com/bike")
+    fetch("http://localhost:7000/bike")
       .then((res) => res.json())
       .then((data) => setBikes(data));
   }, []);
