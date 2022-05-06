@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Carousel, Form, FormControl } from "react-bootstrap";
+import useBikes from "../../../hooks/useBikes";
 import banner from "../../../images/images/Banner-1.jpg";
 import Bike from "../Bike/Bike";
 import RidingKits from "../RidingKits/RidingKits";
@@ -7,13 +8,7 @@ import Spares from "../Spares/Spares";
 import "./Home.css";
 
 const Home = () => {
-  const [bikes, setBikes] = useState([]);
-
-  useEffect(() => {
-    fetch("https://limitless-mountain-78144.herokuapp.com/bike")
-      .then((res) => res.json())
-      .then((data) => setBikes(data));
-  }, []);
+  const [bikes] = useBikes();
   return (
     <div>
       <div className="my-5 w-50 mx-auto">
@@ -32,9 +27,6 @@ const Home = () => {
             <Carousel.Caption>
               <h3>Here's the Great Deal</h3>
               <p>Grab the beast</p>
-              {/* <button style={{ backgroundColor: "orangeRed" }} className="btn rounded-pill text-white w-25">
-                Deal Now
-              </button> */}
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

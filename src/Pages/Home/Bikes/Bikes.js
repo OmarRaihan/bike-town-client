@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
+import useBikes from "../../../hooks/useBikes";
 import Bike from "../Bike/Bike";
-import './Bikes.css'
+import "./Bikes.css";
 
 const Bikes = () => {
-  const [bikes, setBikes] = useState([]);
-
-  useEffect(() => {
-    fetch("https://limitless-mountain-78144.herokuapp.com/bike")
-      .then((res) => res.json())
-      .then((data) => setBikes(data));
-  }, []);
+  const [bikes] = useBikes();
 
   return (
     <div className="container">

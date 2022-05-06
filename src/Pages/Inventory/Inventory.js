@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form } from "react-bootstrap";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useBikes from "../../hooks/useBikes";
 import UpdateQuantity from "../UpdateQuantity/UpdateQuantity";
 import "./Inventory.css";
@@ -10,34 +9,44 @@ const Inventory = () => {
   const { quantity } = bikes;
   const { inventoryId } = useParams();
   const [product, setProduct] = useState({});
-  const [updateQuantity, setUpdateQuantity] = useState(quantity);
-
-  const navigate = useNavigate();
+  const [updateQuantity, setUpdateQuantity] = useState(0);
   const { id } = useParams();
 
   useEffect(() => {
     const url = `https://limitless-mountain-78144.herokuapp.com/bike/${inventoryId}`;
 
-    fetch(url)
+    fetch(url, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [inventoryId]);
 
   // ------------------------------------------------------
+  // ------------------------------------------------------
 
-  useEffect(() => {
-    setUpdateQuantity(quantity);
-  }, [quantity]);
+  // useEffect(() => {
+  //   setUpdateQuantity(quantity);
+  // }, [setUpdateQuantity]);
 
-  const handleQuantity = () => {
-    console.log(updateQuantity);
-    setUpdateQuantity(updateQuantity - 1);
+  const handleDeliver = () => {
+    // console.log(updateQuantity);
+    // setUpdateQuantity(quantity - 1);
+    let decrementQuantity = setUpdateQuantity(updateQuantity - 1);
+    // setUpdateQuantity(updateQuantity--)
+
+    if (updateQuantity <= 0) {
+      decrementQuantity = () => setUpdateQuantity(1);
+    }
+
     fetch(`https://limitless-mountain-78144.herokuapp.com/bike/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ updateQuantity: updateQuantity }),
+      body: JSON.stringify({ decrementQuantity }),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
@@ -60,7 +69,7 @@ const Inventory = () => {
             <p>Supplier: {product.supplier}</p>
           </div>
           <div className="deliver-button">
-            <button onClick={handleQuantity} style={{ backgroundColor: "orangeRed" }} className="btn text-white">
+            <button onClick={handleDeliver} style={{ backgroundColor: "orangeRed" }} className="btn text-white">
               Delivered
             </button>
           </div>

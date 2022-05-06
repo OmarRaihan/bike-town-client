@@ -43,7 +43,7 @@ const Header = () => {
                 ""
               )}
 
-              <NavDropdown title="Services" id="basic-nav-dropdown">
+              <NavDropdown title="Products" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/bikes">
                   Bikes
                 </NavDropdown.Item>
@@ -61,8 +61,9 @@ const Header = () => {
               <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
+
               {user ? (
-                <button style={{ backgroundColor: "orangeRed" }} onClick={handleSignOut} className="signOut-btn btn rounded-pill text-white">
+                <button style={{ backgroundColor: "orangeRed" }} onClick={handleSignOut} className="signOut-btn btn text-white">
                   LogOut
                 </button>
               ) : (
@@ -70,6 +71,7 @@ const Header = () => {
                   Login
                 </Nav.Link>
               )}
+
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -7,7 +7,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Form } from "react-bootstrap";
 import Social from "../Social/Social";
-import './Login.css'
+import "./Login.css";
+import axios from "axios";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -29,7 +30,6 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
-  console.log(user);
 
   if (error) {
     errorElement = <p className="text-danger">Error: {error?.message}</p>;
@@ -41,6 +41,10 @@ const Login = () => {
     const password = passwordRef.current.value;
 
     await signInWithEmailAndPassword(email, password);
+
+    const { data } = await axios.post("https://limitless-mountain-78144.herokuapp.com/login", { email });
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
   };
 
   const navigateRegister = (event) => {
@@ -81,7 +85,11 @@ const Login = () => {
       </p>
       <p>
         Forget Password?
-        <button style={{backgroundColor: "#a8dadc"}} className="btn-link text-primary text-decoration-none border-0 pe-auto" onClick={resetPassword}>
+        <button
+          style={{ backgroundColor: "#a8dadc" }}
+          className="btn-link text-primary text-decoration-none border-0 pe-auto"
+          onClick={resetPassword}
+        >
           Reset Password
         </button>
       </p>
