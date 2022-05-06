@@ -16,9 +16,9 @@ const Inventory = () => {
     const url = `https://limitless-mountain-78144.herokuapp.com/bike/${inventoryId}`;
 
     fetch(url, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
+      // headers: {
+      //   authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      // },
     })
       .then((res) => res.json())
       .then((data) => setProduct(data));
