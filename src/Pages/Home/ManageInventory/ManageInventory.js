@@ -37,40 +37,51 @@ const ManageInventory = () => {
   }
 
   return (
-    <div className="container">
-      <div className="mt-5">
-        <h2 className="text-center">Manage Items ({bikes.length})</h2>
-        <hr />
-      </div>
-      <div className="inventory-container container ">
-        {bikes.map((bike) => (
-          <div key={bike._id}>
-            <div className="manage-card card mx-auto border-0 rounded-lg shadow-lg p-2">
-              <img className="rounded" src={bike.img} alt="" />
-              <div className="info mt-4">
-                <h4 style={{ color: "orange" }}>{bike.name}</h4>
-                <p>{bike.description.slice(0, 80)}</p>
-                <h5>Price: ${bike.price}</h5>
-                <h6>Quantity: {bike.quantity}</h6>
-                <h6>Supplier: {bike.supplier}</h6>
-              </div>
-              <div>
-                <button
-                  style={{ backgroundColor: "orangeRed" }}
-                  className="btn fw-bold text-white  my-2 ms-2 "
-                  onClick={() => handleDelete(bike._id)}
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="text-center my-5">
-        <button onClick={navigateToAddItem} style={{ backgroundColor: "orangeRed" }} className="btn text-white">
-          Add Item
-        </button>
+    <div>
+      <div className="table-container my-5">
+        <div>
+          <h2 className="text-center">Manage Items ({bikes.length})</h2>
+          <hr />
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Supplier</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {bikes.map((bike) => (
+              <tr key={bike._id} className="data-row">
+                <td>
+                  {" "}
+                  <img style={{ width: "120px" }} className="img-fluid" src={bike.img} alt="" />
+                </td>
+                <td>{bike.name}</td>
+                <td>${bike.price}</td>
+                <td>{bike.quantity}</td>
+                <td>{bike.supplier}</td>
+                <td>
+                  <div>
+                    <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white  my-2 " onClick={() => handleDelete(bike._id)}>
+                      Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <div className="text-center my-5">
+          <button onClick={navigateToAddItem} style={{ backgroundColor: "orangeRed" }} className="btn text-white py-2 w-25">
+            Add Item
+          </button>
+        </div>
       </div>
     </div>
   );
