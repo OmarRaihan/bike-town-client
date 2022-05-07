@@ -17,7 +17,6 @@ import AddItem from "./Pages/AddItem/AddItem";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import UpdateQuantity from "./Pages/UpdateQuantity/UpdateQuantity";
 import MyItems from "./Pages/MyItems/MyItems";
-import Table from "./Pages/Table/Table";
 
 function App() {
   return (
@@ -63,14 +62,6 @@ function App() {
           element={
             <RequireAuth>
               <MyItems />
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/table"
-          element={
-            <RequireAuth>
-              <Table />
             </RequireAuth>
           }
         ></Route>
