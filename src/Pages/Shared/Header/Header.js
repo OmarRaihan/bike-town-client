@@ -64,7 +64,7 @@ const Header = () => {
               </Nav.Link>
 
               {user ? (
-                <button style={{ backgroundColor: "orangeRed" }} onClick={handleSignOut} className="signOut-btn btn text-white">
+                <button style={{ backgroundColor: "orangeRed" }} onClick={handleSignOut} className="logout-btn btn text-white">
                   LogOut
                 </button>
               ) : (

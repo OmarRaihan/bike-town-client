@@ -9,7 +9,6 @@ const Inventory = () => {
 
   useEffect(() => {
     const url = `http://localhost:7000/bike/${inventoryId}`;
-    console.log(url);
 
     fetch(url)
       .then((res) => res.json())

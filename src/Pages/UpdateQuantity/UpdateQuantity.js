@@ -6,7 +6,7 @@ import "./UpdateQuantity.css";
 
 const UpdateQuantity = () => {
   const [updateQuantity, setUpdateQuantity] = useState({});
-  const { _id, img, name, description, price, quantity, supplier } = useBikes();
+  const { quantity } = useBikes();
   const { id } = useParams();
 
   // useEffect(() => {
@@ -17,17 +17,19 @@ const UpdateQuantity = () => {
   //     .then((data) => setUpdateQuantity(data));
   // }, []);
 
+  const oldQuantity = quantity
+
   const handleUpdateQuantity = (event) => {
     event.preventDefault();
 
     const quantity = event.target.quantity.value;
-    const oldQuantity = parseInt(updateQuantity)
-    const product = parseInt(quantity + oldQuantity);
+    // const oldQuantity = parseInt(updateQuantity.quantity)
+    const product = (quantity + oldQuantity);
     // const newProduct = product + oldQuantity;
 
     // send data to server
     // If there is no data on database, PUT method will add data. If there is data on database, PUT will update it.
-    const url = `http://localhost:7000/bike/${_id}`;
+    const url = `http://localhost:7000/bike/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

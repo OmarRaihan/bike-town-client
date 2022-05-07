@@ -5,12 +5,10 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
-import useBikes from "../../hooks/useBikes";
 import "./AddItem.css";
 
 const AddItem = () => {
   const { inventoryId } = useParams();
-  const [bikes] = useBikes(inventoryId);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
@@ -34,24 +32,14 @@ const AddItem = () => {
     };
 
     // Item Added to bike collection
-    axios.post("http://localhost:7000/bike", newItem)
-    .then((response) => {
+    axios.post("http://localhost:7000/bike", newItem);
+    axios.post("http://localhost:7000/newItem", newItem).then((response) => {
       const { data } = response;
       if (data.insertedId) {
         toast("Product is added in bike.");
-      }
-    });
-
-    // Item Added to newItem collection
-    axios.post("http://localhost:7000/newItem", newItem)
-    .then((response) => {
-      const { data } = response;
-      if (data.insertedId) {
         toast("Product is added in New Item.");
       }
     });
-    
-    
 
     // const url = `http://localhost:7000/newItem`;
     // fetch(url, {
@@ -72,7 +60,6 @@ const AddItem = () => {
     <div style={{ backgroundColor: "#a8dadc", padding: "1.3rem" }} className="add-item-form mx-auto my-5 rounded-3">
       <h4 className="text-center mb-3">Add New Product</h4>
       <form className="d-flex flex-column" onSubmit={handleAddItem}>
-        {/* handleSubmit(onSubmit) */}
 
         <input
           className="mb-2 border-0 rounded-1 p-2"
