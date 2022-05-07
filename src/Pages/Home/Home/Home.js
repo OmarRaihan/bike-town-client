@@ -11,7 +11,7 @@ const Home = () => {
   const [bikes] = useBikes();
   return (
     <div>
-      <div className="my-5 w-50 mx-auto">
+      <div className="search-bar my-5 mx-auto">
         <Form className="d-flex">
           <FormControl type="search" placeholder="Search Products..." className="me-2 rounded-pill" aria-label="Search" />
           <Button className="rounded-pill" variant="outline-warning">
