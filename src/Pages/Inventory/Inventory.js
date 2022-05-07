@@ -47,10 +47,11 @@ const Inventory = () => {
 
   return (
     <div>
-      <h1 className="text-center my-5">Inventory Item</h1>
+      <h2 className="text-center mt-5">Inventory Item</h2>
+      <hr style={{width: "400px"}} className="mx-auto" />
 
       <div className="inventory-card card border-0 shadow mx-auto p-3">
-        <div className="">
+        <div>
           <div>
             <img className="img-fluid" src={product?.img} alt="" />
           </div>

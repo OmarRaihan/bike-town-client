@@ -38,11 +38,11 @@ const ManageInventory = () => {
 
   return (
     <div className="container">
-      <div className="my-5">
+      <div className="mt-5">
         <h2 className="text-center">Manage Items ({bikes.length})</h2>
         <hr />
       </div>
-      <div className="inventory-container container my-5">
+      <div className="inventory-container container ">
         {bikes.map((bike) => (
           <div key={bike._id}>
             <div className="manage-card card mx-auto border-0 rounded-lg shadow-lg p-2">

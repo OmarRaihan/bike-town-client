@@ -14,9 +14,9 @@ const Spares = () => {
     <div className="container">
       <div>
       <h2 className="text-center mt-5">Spare & Parts</h2>
-      <hr />
+      <hr className="w-75 mx-auto" />
       </div>
-      <div className="spares-container mt-4 mb-5">
+      <div className="spares-container mb-5">
         {spares.map((spare) => (
           <Spare key={spare._id} spare={spare}></Spare>
         ))}

@@ -7,8 +7,9 @@ const Bikes = () => {
 
   return (
     <div className="container">
-      <h2 className="text-center my-5">Bike Collection</h2>
-      <div className="bikes-container my-5">
+      <h2 className="text-center mt-5">Bike Collection ({bikes.length})</h2>
+      <hr className="w-75 mx-auto" />
+      <div className="bikes-container mt-">
         {bikes.map((bike) => (
           <Bike key={bike._id} bike={bike}></Bike>
         ))}

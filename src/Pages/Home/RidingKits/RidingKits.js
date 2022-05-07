@@ -14,7 +14,7 @@ const RidingKits = () => {
     <div className="container">
       <div className="">
         <h2 className="text-center mt-5">Riding Kits</h2>
-        <hr />
+        <hr className="w-75 mx-auto" />
       </div>
       <div className="ridingKits-container mt-4 mb-5">
         {kits.map((kit) => (
