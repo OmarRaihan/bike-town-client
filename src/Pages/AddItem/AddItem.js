@@ -33,13 +33,15 @@ const AddItem = () => {
 
     // Item Added to bike collection
     axios.post("http://localhost:7000/bike", newItem);
-    axios.post("http://localhost:7000/newItem", newItem).then((response) => {
-      const { data } = response;
-      if (data.insertedId) {
-        toast("Product is added in bike.");
-        toast("Product is added in New Item.");
-      }
-    });
+    axios.post("http://localhost:7000/newItem", newItem)
+
+      .then((response) => {
+        const { data } = response;
+        if (data.insertedId) {
+          toast("Product is added in bike.");
+          toast("Product is added in New Item.");
+        }
+      });
 
     // const url = `http://localhost:7000/newItem`;
     // fetch(url, {
@@ -60,7 +62,6 @@ const AddItem = () => {
     <div style={{ backgroundColor: "#a8dadc", padding: "1.3rem" }} className="add-item-form mx-auto my-5 rounded-3">
       <h4 className="text-center mb-3">Add New Product</h4>
       <form className="d-flex flex-column" onSubmit={handleAddItem}>
-
         <input
           className="mb-2 border-0 rounded-1 p-2"
           placeholder="Photo URL"
