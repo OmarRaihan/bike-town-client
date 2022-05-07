@@ -10,7 +10,7 @@ const UpdateQuantity = () => {
   const { id } = useParams();
 
   // useEffect(() => {
-  //   const url = `http://localhost:7000/bike/${_id}`;
+  //   const url = `https://limitless-mountain-78144.herokuapp.com/bike/${_id}`;
   //   console.log(url);
   //   fetch(url)
   //     .then((res) => res.json())
@@ -29,7 +29,7 @@ const UpdateQuantity = () => {
 
     // send data to server
     // If there is no data on database, PUT method will add data. If there is data on database, PUT will update it.
-    const url = `http://localhost:7000/bike/${id}`;
+    const url = `https://limitless-mountain-78144.herokuapp.com/bike/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -50,7 +50,7 @@ const UpdateQuantity = () => {
     <div className="update-form mx-auto my-5">
       <div style={{ backgroundColor: "#a8dadc" }} className="py-5 rounded-3">
         <h4 className="text-center mb-3">Update Stock</h4>
-        <Form onClick={handleUpdateQuantity} className="w-50 mx-auto">
+        <Form onClick={handleUpdateQuantity} className="update-input mx-auto">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control type="number" name="quantity" placeholder="Product Quantity" />
           </Form.Group>

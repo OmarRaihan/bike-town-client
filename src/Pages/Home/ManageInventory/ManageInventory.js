@@ -13,7 +13,7 @@ const ManageInventory = () => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `http://localhost:7000/bike/${id}`;
+      const url = `https://limitless-mountain-78144.herokuapp.com/bike/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -67,7 +67,7 @@ const ManageInventory = () => {
                 <td>{bike.supplier}</td>
                 <td>
                   <div>
-                    <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white  my-2 " onClick={() => handleDelete(bike._id)}>
+                    <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white my-2 " onClick={() => handleDelete(bike._id)}>
                       Delete
                     </button>
                   </div>
@@ -78,7 +78,7 @@ const ManageInventory = () => {
         </table>
 
         <div className="text-center my-5">
-          <button onClick={navigateToAddItem} style={{ backgroundColor: "orangeRed" }} className="btn text-white py-2 w-25">
+          <button onClick={navigateToAddItem} style={{ backgroundColor: "orangeRed" }} className="add-item-btn btn text-white py-2">
             Add Item
           </button>
         </div>

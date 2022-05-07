@@ -2,8 +2,26 @@
     width: 35%;
 }
 
-@media screen and (max-width: 540px) {
+.update-input{
+    width: 65%
+}
+
+@media screen and (max-width: 576px) {
     .update-form {
-        width: 90%;
+        width: 80%;
+    }
+
+    .update-input{
+        width: 75%
+    }
+}
+@media screen and (max-width: 992px) {
+    .update-form {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .update-form {
+        width: 80%;
     }
 }

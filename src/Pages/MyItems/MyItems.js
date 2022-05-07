@@ -13,7 +13,7 @@ const MyItems = () => {
   useEffect(() => {
     const getNewItem = async () => {
       const email = user?.email;
-      const url = `http://localhost:7000/newItem?email=${email}`;
+      const url = `https://limitless-mountain-78144.herokuapp.com/newItem?email=${email}`;
       const { data } = await axios.get(url);
       setMyItems(data);
     };

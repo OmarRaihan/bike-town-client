@@ -19,7 +19,7 @@ const Home = () => {
         </Form>
       </div>
 
-      <div className="my-5">
+      {/* <div className="my-5">
         <Carousel fade>
           <Carousel.Item>
             <img className="d-block w-100" src={banner} alt="banner" />
@@ -29,6 +29,11 @@ const Home = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+      </div> */}
+
+      {/* Banner Image */}
+      <div>
+        <img className="img-fluid" src={banner} alt="" />
       </div>
 
       {/* Bike Collection */}

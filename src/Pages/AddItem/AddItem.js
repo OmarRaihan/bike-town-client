@@ -32,8 +32,8 @@ const AddItem = () => {
     };
 
     // Item Added to bike collection
-    axios.post("http://localhost:7000/bike", newItem);
-    axios.post("http://localhost:7000/newItem", newItem)
+    axios.post("https://limitless-mountain-78144.herokuapp.com/bike", newItem);
+    axios.post("https://limitless-mountain-78144.herokuapp.com/newItem", newItem)
 
       .then((response) => {
         const { data } = response;
@@ -43,7 +43,7 @@ const AddItem = () => {
         }
       });
 
-    // const url = `http://localhost:7000/newItem`;
+    // const url = `https://limitless-mountain-78144.herokuapp.com/newItem`;
     // fetch(url, {
     //   method: "POST",
     //   headers: {

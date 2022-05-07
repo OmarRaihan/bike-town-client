@@ -6,7 +6,7 @@ const Spares = () => {
   const [spares, setSpares] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:7000/parts")
+    fetch("https://limitless-mountain-78144.herokuapp.com/parts")
       .then((res) => res.json())
       .then((data) => setSpares(data));
   }, []);

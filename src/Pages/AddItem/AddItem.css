@@ -2,7 +2,7 @@
     width: 25%;
 }
 
-@media screen and (max-width:540px) {
+@media screen and (max-width: 576px) {
     .add-item-form {
         width: 85%;
     }

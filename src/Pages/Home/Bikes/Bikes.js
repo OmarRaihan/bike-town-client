@@ -9,7 +9,7 @@ const Bikes = () => {
     <div className="container">
       <h2 className="text-center mt-5">Bike Collection ({bikes.length})</h2>
       <hr className="w-75 mx-auto" />
-      <div className="bikes-container mt-">
+      <div className="bikes-container mb-5">
         {bikes.map((bike) => (
           <Bike key={bike._id} bike={bike}></Bike>
         ))}

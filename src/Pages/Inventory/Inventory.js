@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import UpdateQuantity from "../UpdateQuantity/UpdateQuantity";
 import "./Inventory.css";
 
 const Inventory = () => {
   const { inventoryId } = useParams();
   const [product, setProduct] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `http://localhost:7000/bike/${inventoryId}`;
+    const url = `https://limitless-mountain-78144.herokuapp.com/bike/${inventoryId}`;
 
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
-      
   }, [inventoryId]);
 
   // ------------------------------------------------------
@@ -24,17 +24,14 @@ const Inventory = () => {
   // }, [setUpdateQuantity]);
 
   const handleDeliver = () => {
-
     // // console.log(updateQuantity);
     // // setUpdateQuantity(quantity - 1);
     // let decrementQuantity = setUpdateQuantity(updateQuantity - 1);
     // // setUpdateQuantity(updateQuantity--)
-
     // if (updateQuantity <= 0) {
     //   decrementQuantity = () => setUpdateQuantity(1);
     // }
-
-    // fetch(`http://localhost:7000/bike/${id}`, {
+    // fetch(`https://limitless-mountain-78144.herokuapp.com/bike/${id}`, {
     //   method: "PUT",
     //   headers: {
     //     "Content-Type": "application/json",
@@ -45,26 +42,37 @@ const Inventory = () => {
     //   .then((data) => console.log(data));
   };
 
+  const handleManageItem = () => {
+    navigate("/manage");
+  };
+
   return (
     <div>
       <h2 className="text-center mt-5">Inventory Item</h2>
-      <hr style={{width: "400px"}} className="mx-auto" />
+      <hr style={{ width: "400px" }} className="mx-auto" />
 
       <div className="inventory-card card border-0 shadow mx-auto p-3">
         <div>
-          <div>
-            <img className="img-fluid" src={product?.img} alt="" />
-          </div>
-          <div className="info mt-4">
-            <h4>Name: {product?.name}</h4>
-            <p>{product?.description}</p>
-            <p>Price: ${product?.price}</p>
-            <p>Quantity: {product?.quantity}</p>
-            <p>Supplier: {product?.supplier}</p>
-          </div>
-          <div className="deliver-button">
-            <button onClick={handleDeliver} style={{ backgroundColor: "orangeRed" }} className="btn text-white px-4">
+          <img className="img-fluid" src={product?.img} alt="" />
+        </div>
+        <div className="info mt-5">
+          <h4>{product?.name}</h4>
+          <p>{product?.description}</p>
+          <p>Price: ${product?.price}</p>
+          <p>Quantity: {product?.quantity}</p>
+          <p>Supplier: {product?.supplier}</p>
+        </div>
+
+        {/* Button */}
+        <div className="d-flex">
+          <div className="">
+            <button onClick={handleDeliver} style={{ backgroundColor: "orangeRed" }} className="deliver-btn btn text-white px-4 me-3">
               Deliver
+            </button>
+          </div>
+          <div className="manage-btn">
+            <button onClick={handleManageItem} style={{ backgroundColor: "orangeRed" }} className="btn px-3 text-white">
+              Manage
             </button>
           </div>
         </div>

@@ -4,7 +4,7 @@ const useBikes = () => {
   const [bikes, setBikes] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:7000/bike`
+    const url = `https://limitless-mountain-78144.herokuapp.com/bike`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setBikes(data));

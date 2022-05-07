@@ -9,6 +9,18 @@
 
 @media screen and (max-width: 540px) {
     .bike-card{
-        width: 350px;
+        width: 325px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .bike-card{
+        width: 325px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bike-card{
+        width: 325px;
     }
 }
