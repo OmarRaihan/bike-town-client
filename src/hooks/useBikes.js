@@ -4,8 +4,8 @@ const useBikes = () => {
   const [bikes, setBikes] = useState([]);
 
   useEffect(() => {
-
-    fetch("http://localhost:7000/bike")
+    const url = `http://localhost:7000/bike`
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setBikes(data));
   }, []);

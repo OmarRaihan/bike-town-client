@@ -7,7 +7,7 @@ const Bike = ({ bike }) => {
 
   const navigate = useNavigate();
 
-  const navigateToInventory = (id) => {
+  const navigateToInventory = (_id) => {
     navigate(`/inventory/${_id}`);
   };
 

@@ -15,8 +15,8 @@ const Header = () => {
   };
 
   return (
-    <header className="header shadow-lg">
-      <Navbar expand="lg" sticky="top">
+    <header style={{position: 'sticky', top: '0', zIndex: "50"}} className="header shadow-lg">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand style={{color: '#485461'}} className="head-name fw-bold fs-4" as={Link} to="/home">
             BIKE TOWN

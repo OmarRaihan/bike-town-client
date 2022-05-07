@@ -38,7 +38,7 @@ const AddItem = () => {
     .then((response) => {
       const { data } = response;
       if (data.insertedId) {
-        toast("New Item is added in bike.");
+        toast("Product is added in bike.");
       }
     });
 
@@ -47,7 +47,7 @@ const AddItem = () => {
     .then((response) => {
       const { data } = response;
       if (data.insertedId) {
-        toast("New Item is added.");
+        toast("Product is added in New Item.");
       }
     });
     
