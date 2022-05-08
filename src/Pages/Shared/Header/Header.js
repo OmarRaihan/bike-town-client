@@ -4,21 +4,20 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
-import Loading from "../Loading/Loading";
 import "./Header.css";
 
 const Header = () => {
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const handleSignOut = () => {
     signOut(auth);
   };
 
   return (
-    <header style={{position: 'sticky', top: '0', zIndex: "50"}} className="header shadow-lg">
+    <header style={{ position: "sticky", top: "0", zIndex: "50" }} className="header shadow-lg">
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand style={{color: '#485461'}} className="head-name fw-bold fs-4" as={Link} to="/home">
+          <Navbar.Brand style={{ color: "#485461" }} className="head-name fw-bold fs-4" as={Link} to="/home">
             BIKE TOWN
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

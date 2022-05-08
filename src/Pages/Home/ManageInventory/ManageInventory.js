@@ -27,7 +27,7 @@ const ManageInventory = () => {
           }
         });
     }
-    window.location.reload()
+    window.location.reload();
   };
 
   const navigateToAddItem = () => {

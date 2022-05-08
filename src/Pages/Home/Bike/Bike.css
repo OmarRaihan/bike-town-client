@@ -1,26 +1,27 @@
-.bike-card{
-    width: 365px;
+.bike-card {
+  width: 365px;
 }
 
-
-.info p, h5, h6{
-    color: gray;
+.info p,
+h5,
+h6 {
+  color: gray;
 }
 
 @media screen and (max-width: 540px) {
-    .bike-card{
-        width: 325px;
-    }
+  .bike-card {
+    width: 325px;
+  }
 }
 
 @media screen and (max-width: 992px) {
-    .bike-card{
-        width: 325px;
-    }
+  .bike-card {
+    width: 325px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    .bike-card{
-        width: 325px;
-    }
+  .bike-card {
+    width: 325px;
+  }
 }

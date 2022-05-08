@@ -46,7 +46,9 @@ const Blogs = () => {
         <h4 className="text-center my-3">SQL vs NoSQL</h4>
         <div>
           <p>1. SQL databases are relational, NoSQL databases are non-relational.</p>
-          <p>2. SQL databases use structured query language and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data.</p>
+          <p>
+            2. SQL databases use structured query language and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data.
+          </p>
           <p>3. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.</p>
           <p>4. SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores.</p>
         </div>

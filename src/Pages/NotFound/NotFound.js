@@ -5,9 +5,9 @@ import "./NotFound.css";
 const NotFound = () => {
   const navigate = useNavigate();
 
-  const handleHome = () =>{
-      navigate('/home')
-  }
+  const handleHome = () => {
+    navigate("/home");
+  };
   return (
     <div style={{ height: "100vh" }} className="error-page text-center my-5">
       <h1 className="headline">That Page Doesn't Exist!!</h1>

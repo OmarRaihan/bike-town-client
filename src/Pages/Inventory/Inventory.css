@@ -1,22 +1,21 @@
-.inventory-card{
-    width: 600px;
+.inventory-card {
+  width: 600px;
 }
 
-
 @media screen and (max-width: 576px) {
-    .inventory-card{
-        width: 325px;
-    }
+  .inventory-card {
+    width: 325px;
+  }
 }
 
 @media screen and (max-width: 992px) {
-    .inventory-card{
-        width: 325px;
-    }
+  .inventory-card {
+    width: 325px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    .inventory-card{
-        width: 325px;
-    }
+  .inventory-card {
+    width: 325px;
+  }
 }

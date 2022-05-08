@@ -13,13 +13,19 @@ const Footer = () => {
               <h3>Products</h3>
               <ul>
                 <li>
-                  <a id="home-bike" href="home#bikes">Bikes</a>
+                  <a id="home-bike" href="home#bikes">
+                    Bikes
+                  </a>
                 </li>
                 <li>
-                  <a id="home-kits" href="home#kits">Riding Kits</a>
+                  <a id="home-kits" href="home#kits">
+                    Riding Kits
+                  </a>
                 </li>
                 <li>
-                  <a id="home-parts" href="home#spares">Spares Parts</a>
+                  <a id="home-parts" href="home#spares">
+                    Spares Parts
+                  </a>
                 </li>
               </ul>
             </div>

@@ -41,6 +41,7 @@ const AddItem = () => {
         if (data.insertedId) {
           toast("Product is added in bike.");
           toast("Product is added in New Item.");
+          event.target.reset();
         }
       });
   };

@@ -42,6 +42,7 @@ const Login = () => {
 
     await signInWithEmailAndPassword(email, password);
 
+    // use Axios for JWT Token
     // const { data } = await axios.post("http://localhost:7000/login", { email });
     // console.log(data);
     // localStorage.setItem("accessToken", data.accessToken);

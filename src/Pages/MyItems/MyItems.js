@@ -13,7 +13,7 @@ const MyItems = () => {
   useEffect(() => {
     const getNewItem = async () => {
       const email = user?.email;
-      const url = `http://localhost:7000/newItem?email=${email}`;
+      const url = `http://localhost:7000/bike?email=${email}`;
       console.log(url);
       const { data } = await axios.get(url);
       setMyItems(data);
@@ -26,7 +26,7 @@ const MyItems = () => {
   }
 
   return (
-    <div className="container" style={{ height: "100vh" }}>
+    <div className="container">
       <div className="my-5">
         <h2 className="text-center">My Items ({myItems.length})</h2>
         <hr />

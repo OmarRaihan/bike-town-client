@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import Social from "../Social/Social";
-import './Register.css'
+import "./Register.css";
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
@@ -34,7 +34,6 @@ const Register = () => {
     console.log("Updated profile");
     navigate("/home");
   };
-
 
   return (
     <div style={{ backgroundColor: "#a8dadc", padding: "1.3rem" }} className="register-form rounded-3 mx-auto my-5">

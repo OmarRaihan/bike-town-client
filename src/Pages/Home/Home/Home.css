@@ -1,15 +1,15 @@
-.search-bar{
-    width: 50%
+.search-bar {
+  width: 50%;
 }
 
 @media screen and (max-width: 576px) {
-    .search-bar{
-        width: 90%
-    }
+  .search-bar {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    .search-bar{
-        width: 90%
-    }
+  .search-bar {
+    width: 90%;
+  }
 }

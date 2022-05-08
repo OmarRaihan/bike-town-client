@@ -1,20 +1,19 @@
 .ridingKits-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .ridingKits-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  @media screen and (max-width: 576px) {
-    .ridingKits-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
+}
+
+@media screen and (max-width: 992px) {
+  .ridingKits-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  @media screen and (max-width: 992px) {
-    .ridingKits-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  
+}

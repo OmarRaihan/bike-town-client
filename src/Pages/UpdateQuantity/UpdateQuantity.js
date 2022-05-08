@@ -9,22 +9,14 @@ const UpdateQuantity = () => {
   const { quantity } = useBikes();
   const { id } = useParams();
 
-  // useEffect(() => {
-  //   const url = `http://localhost:7000/bike/${_id}`;
-  //   console.log(url);
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((data) => setUpdateQuantity(data));
-  // }, []);
-
-  const oldQuantity = quantity
+  const oldQuantity = quantity;
 
   const handleUpdateQuantity = (event) => {
     event.preventDefault();
 
     const quantity = event.target.quantity.value;
     // const oldQuantity = parseInt(updateQuantity.quantity)
-    const product = (quantity + oldQuantity);
+    const product = quantity + oldQuantity;
     // const newProduct = product + oldQuantity;
 
     // send data to server
@@ -35,8 +27,7 @@ const UpdateQuantity = () => {
       headers: {
         "content-type": "application/json",
       },
-      // body: JSON.stringify(product),
-      body: parseInt(product),
+      body: JSON.stringify(product),
     })
       .then((res) => res.json())
       .then((data) => {
