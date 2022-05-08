@@ -9,7 +9,7 @@ const Inventory = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `https://limitless-mountain-78144.herokuapp.com/bike/${inventoryId}`;
+    const url = `http://localhost:7000/bike/${inventoryId}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -31,7 +31,7 @@ const Inventory = () => {
     // if (updateQuantity <= 0) {
     //   decrementQuantity = () => setUpdateQuantity(1);
     // }
-    // fetch(`https://limitless-mountain-78144.herokuapp.com/bike/${id}`, {
+    // fetch(`http://localhost:7000/bike/${id}`, {
     //   method: "PUT",
     //   headers: {
     //     "Content-Type": "application/json",

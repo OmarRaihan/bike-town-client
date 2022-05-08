@@ -6,7 +6,7 @@ const RidingKits = () => {
   const [kits, setKits] = useState([]);
 
   useEffect(() => {
-    fetch("https://limitless-mountain-78144.herokuapp.com/kit")
+    fetch("http://localhost:7000/kit")
       .then((res) => res.json())
       .then((data) => setKits(data));
   }, []);

@@ -2,7 +2,7 @@
 
 Live Website [BIKE TOWN](https://bike-town.web.app/).
 
-Live Server (https://limitless-mountain-78144.herokuapp.com/).
+Live Server (http://localhost:7000/).
 
 ## Features used in this website
 
