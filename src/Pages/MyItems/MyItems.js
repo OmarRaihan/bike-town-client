@@ -23,26 +23,6 @@ const MyItems = () => {
     getNewItem();
   }, [user]);
 
-  const handleDelete = (id) => {
-    const proceed = window.confirm("Are you sure to delete?");
-    if (proceed) {
-      console.log("deleted", id);
-      const url = `https://limitless-mountain-78144.herokuapp.com/newItem/${id}`;
-      fetch(url, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.deletedCount > 0) {
-            console.log("deleted");
-            const remaining = bikes.filter((bike) => bikes._id !== id);
-            setBikes(remaining);
-          }
-        });
-    }
-    window.location.reload();
-  };
-
   if (!user) {
     navigate("/login");
   }
@@ -64,11 +44,6 @@ const MyItems = () => {
                 <h5>Price: ${bike?.price}</h5>
                 <h6>Quantity: {bike?.quantity}</h6>
                 <h6>Supplier: {bike?.supplier}</h6>
-              </div>
-              <div>
-                <button style={{ backgroundColor: "orangeRed" }} className="btn fw-bold text-white my-2 " onClick={() => handleDelete(bike._id)}>
-                  Delete
-                </button>
               </div>
             </div>
           </div>
