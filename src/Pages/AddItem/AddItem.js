@@ -32,9 +32,9 @@ const AddItem = () => {
     };
 
     // Item Added to bike collection
-    axios.post("http://localhost:7000/newItem", newItem);
+    axios.post("https://limitless-mountain-78144.herokuapp.com/newItem", newItem);
     axios
-      .post("http://localhost:7000/bike", newItem)
+      .post("https://limitless-mountain-78144.herokuapp.com/bike", newItem)
 
       .then((response) => {
         const { data } = response;
