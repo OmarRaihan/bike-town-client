@@ -1,10 +1,20 @@
-# Getting Started with Create React App
+# BIKE TOWN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Website [BIKE TOWN](https://bike-town.web.app/).
 
-## Available Scripts
+Live Server (https://limitless-mountain-78144.herokuapp.com/).
 
-In the project directory, you can run:
+## Features used in this website
+
+* React Router
+* React Bootstrap
+* React Toastify
+* React-Firebase-Hooks
+* Axios
+* JWT Token
+
+
+
 
 ### `npm start`
 
