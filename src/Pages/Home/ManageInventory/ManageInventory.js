@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
@@ -13,7 +14,7 @@ const ManageInventory = () => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `https://limitless-mountain-78144.herokuapp.com/bike/${id}`;
+      const url = `http://localhost:7000/bike/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -26,6 +27,7 @@ const ManageInventory = () => {
           }
         });
     }
+    window.location.reload()
   };
 
   const navigateToAddItem = () => {

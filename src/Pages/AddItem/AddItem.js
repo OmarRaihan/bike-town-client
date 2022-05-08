@@ -25,15 +25,16 @@ const AddItem = () => {
       img: event.target.img.value,
       name: event.target.name.value,
       price: event.target.price.value,
-      quantity: event.target.quantity.value,
+      quantity: parseInt(event.target.quantity.value),
       description: event.target.description.value,
       supplier: event.target.supplier.value,
       email: user?.email,
     };
 
     // Item Added to bike collection
-    axios.post("https://limitless-mountain-78144.herokuapp.com/bike", newItem);
-    axios.post("https://limitless-mountain-78144.herokuapp.com/newItem", newItem)
+    axios.post("http://localhost:7000/newItem", newItem);
+    axios
+      .post("http://localhost:7000/bike", newItem)
 
       .then((response) => {
         const { data } = response;
@@ -42,20 +43,6 @@ const AddItem = () => {
           toast("Product is added in New Item.");
         }
       });
-
-    // const url = `https://limitless-mountain-78144.herokuapp.com/newItem`;
-    // fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //     // authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-    //   },
-    //   body: JSON.stringify(data),
-    // })
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     console.log("success", result);
-    //   });
   };
 
   return (

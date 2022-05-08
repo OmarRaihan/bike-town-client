@@ -10,7 +10,7 @@ const UpdateQuantity = () => {
   const { id } = useParams();
 
   // useEffect(() => {
-  //   const url = `https://limitless-mountain-78144.herokuapp.com/bike/${_id}`;
+  //   const url = `http://localhost:7000/bike/${_id}`;
   //   console.log(url);
   //   fetch(url)
   //     .then((res) => res.json())
@@ -29,7 +29,7 @@ const UpdateQuantity = () => {
 
     // send data to server
     // If there is no data on database, PUT method will add data. If there is data on database, PUT will update it.
-    const url = `https://limitless-mountain-78144.herokuapp.com/bike/${id}`;
+    const url = `http://localhost:7000/bike/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

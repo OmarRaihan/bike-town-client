@@ -37,7 +37,7 @@ const Home = () => {
       </div>
 
       {/* Bike Collection */}
-      <div className="container">
+      <div id="home-bike" className="container">
         <div className="mt-5">
           <h2 className="text-center">Bike Collection</h2>
           <hr className="w-75 mx-auto" />
